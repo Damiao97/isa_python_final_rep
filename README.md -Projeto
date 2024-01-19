@@ -1,0 +1,102 @@
+Avaliação do risco de tempestades
+Descrição do Projeto: 
+O projeto iniciou-se na avaliação do risco de tempestade face à crescente vulnerabilidade das zonas costeiras, é essencial
+caracterizar este fenómeno potenciador de inundações. O nosso projeto baseou-se no estudo da Dissertação cujo titulo é "Identificação de tempestades extremas
+na Costa Portuguesa" realizada pelo Pedro Miguel Alves Pinotes, na universidade Técnico de lisboa. 
+
+ 
+O presente projeto procura quantificar a sobre-elevação ao longo da costa, com o principal objetivo a contribuição para o estabelecimento de relações entre
+extremos de variáveis meteorológicas ocorridos durante uma tempestade. Relaciona a pressão atmosférica ao nível do mar e sobre-elevações de origem
+meteorológica, observadas nos registos maregráficos. A relação entre a pressão atmosférica e a sobre-elevação é feita através da sua frequência relativa e
+da determinação dos valores de anomalia da pressão conducentes a situações extremas, numa abordagem de tipo causa-efeito. Com estes dois pontos-alvo, 
+pretende-se dotar os sistemas de alerta e aviso de critérios objetivos de deteção de ocorrências e assim aplicar em Python um software que permite o registo 
+e avaliação dos dados. 
+A principal funcionalidade inclui o armazenamento de informações da sobre-elevação, pressão atmosférica, hora e data do registro num arquivo CSV. 
+Além disso, o software é capaz de avaliar o risco de tempestade com base nessas informações e gera gráficos comparativos.
+
+Funcionalidades Principais
+
+Registo de dados para avaliação do risco de Tempestade:
+O usuário pode inserir manualmente os dados de sobre-elevação(em cm) e a  pressão atmosférica(em hpa).
+As informações são registadas num arquivo CSV em tempo real, para referência futura, acompanhado com a hora e data de registo.
+
+Avaliação de Risco:
+O software avalia o risco de tempestade com base nas condições de sobre-elevação e pressão atmosférica.
+Classifica o risco como "Alto", "Médio" ou "Baixo", onde o risco altos de tempestade 
+consideram uma sobre-elevação maior que 50 cm, e a pressão atmosférica a 1005 pa.
+
+Gerar gráficos:
+Gera gráficos cartesianos, que relaciona a sobre-elevação e a pressão atmosférica.
+São apresentados três pontos com cores distintas, indicadores dos diferentes níveis de risco de tempestade.
+Ainda tem como referência uma reta de regressão linhear que ilustra a relação das duas variáveis,
+a cada aumento de 1 hPa na pressão atmosférica acima de 1000 hPa, a sobre-elevação aumenta linearmente em 0.4 cm. 
+
+Leitura dos dados registados no arquivo tempestades.csv:
+Para análises dos registos o software é dotado com a leitura dos dados da pressão atmosférica e  
+sobre-elevações do arquivo CSV que estão a ser registados pelo usuário.
+
+Cálculo da média das variáveis: 
+Com a leitura do arquivo tempestades.csv, o programa faz a 
+média das sobre-elevações e pressão atmosférica das várias medições, 
+onde só devolve o valor após três registos consecutivos.
+
+Cálculo da mediana das variáveis:
+Com a leitura do arquivo tempestades.csv, o programa faz a 
+mediana das sobre-elevações e pressão atmosférica das várias medições, 
+onde só devolve o valor após três registos consecutivos.
+
+Cálculo do desvio padrão:
+Com a leitura do arquivo tempestades.csv, o programa faz a 
+desvio padrão das sobre-elevações e pressão atmosférica das várias medições, 
+onde só devolve o valor após três registos consecutivos.
+
+Registo dos cálculos da média, mediana e desvio padrão no arquivo estatisticas_tempestade.csv:
+Desenvolvimento de um novo arquivo que regista os três cálculos estatísticos e os respetivos
+valores de sobre-elevação e pressão atmosférica,
+para uma melhor refleção sobre os valores ao longo dos tempos de registo.
+Dá uma ideia da variação dos dados em certo período de tempo.
+
+Arquivos csv do projeto:
+tempestades.csv: registo da hora, em formato HH-MM_SS, da data, em formato YYYY-MM-DD, da sobre-elevação, 
+em centimetros, e da pressão atmosférica, em hectopascal. 
+estatísticas_tempestade.csv: registo da média das sobre-elevações, da mediana das sobre-elevações,
+desvio padrão das sobre-elevações, média da pressão atmosférica,mediana da pressão atmosférica e do desvio padrão da pressão atmosférica
+
+Requisitos:
+
+Para implementar este projeto, é necessário adquirir:
+Arquivos CSV em Python.
+Utilização da biblioteca matplotlib para criar gráficos.
+Manipulação de datas e horas em Python.
+Testes unitários em Python usando o pytest.
+Python 3.x instalado.
+csv: Para leitura e escrita em arquivos CSV.
+datetime: Para manipulaçao de datas e horas.
+matplotlib.pyplot: Para criar gráficos visuais.
+pytest: Uma estrutura de teste para Python 
+
+Execução:
+
+Clonagem do repositório.
+Execução para iniciar a aplicação: python project.py 
+Seguir instruções para registar tempestades e visualizar resultados.
+
+Bibliotecas:
+
+- csv: Para leitura e escrita em arquivos CSV.
+- datetime: Para manipulação de datas e horas.
+- matplotlib.pyplot: Para criar gráficos visuais.
+- pytest: Uma estrutura de teste para Python.
+
+
+Estrutura do Projeto: 
+
+project.py: Contém a implementação principal, incluindo a classe Tempestade e a função main.
+test_project.py: Contém os testes unitários para as funções do projeto.
+
+
+[Ana Moreira]
+[Damião Goes]
+[Miguel Gonçalves Ferreira]
+Notas Adicionais
+Este projeto foi desenvolvido como parte da disciplina de [python] do curso [Green Data Science] no [Instituto Superior de Agronomia]. 
